@@ -26,7 +26,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/45" />
 
-      <div className="relative z-10 flex min-h-[105vh] items-center px-4 py-28 sm:px-6 sm:py-32 lg:px-7">
+      <div className="relative z-10 flex min-h-[105vh] items-center m-5 px-4 py-28 sm:px-6 sm:py-32 lg:px-7">
         <div className="max-w-[820px]">
           <div className="mb-7 flex items-center gap-4 font-body text-[12px] tracking-[0.25em] text-[#c9a84c] sm:text-[14px] sm:tracking-[0.45em]">
             <span className="h-px w-9 bg-[#c9a84c] sm:w-11" />
