@@ -12,36 +12,36 @@ export const siteInfo = {
 export const navLinks = [
   {
     label: "Anasayfa",
-    href: "/",
+    href: "/umut-grup/",
     featured: true,
   },
   {
     label: "Hakkımızda",
-    href: "/hakkimizda",
+    href: "/umut-grup/hakkimizda",
   },
   {
     label: "Galaxy",
-    href: "/projeler/galaxy",
+    href: "/umut-grup/projeler/galaxy",
   },
   {
     label: "İnci Konakları",
-    href: "/projeler/inci-konaklari",
+    href: "/umut-grup/projeler/inci-konaklari",
   },
   {
     label: "Huzur Konakları",
-    href: "/projeler/huzur-konaklari",
+    href: "/umut-grup/projeler/huzur-konaklari",
   },
   {
     label: "Gözde Sitesi",
-    href: "/projeler/gozde",
+    href: "/umut-grup/projeler/gozde",
   },
   {
     label: "Mercan Park",
-    href: "/projeler/mercan",
+    href: "/umut-grup/projeler/mercan",
   },
   {
     label: "Yeni Proje 1",
-    href: "/projeler/yeni-proje-1",
+    href: "/umut-grup/projeler/yeni-proje-1",
   },
 ];
 
