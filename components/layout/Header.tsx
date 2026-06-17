@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { navLinks, siteInfo } from "@/data/siteData";
 import { Menu, MessageCircle, Phone } from "lucide-react";
-
+import { publicPath } from "@/lib/paths";
 function InstagramSvg({ size = 15 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -40,7 +40,7 @@ export default function Header() {
         <div className="flex h-[72px] items-center justify-between px-4 sm:h-[78px] lg:h-[88px] lg:px-7">
           <a href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src={publicPath("/images/logo.png")}
               alt="Umut Group"
               width={220}
               height={80}
