@@ -212,16 +212,6 @@ export const projects: Project[] = [
       category: "Dış Cephe",
       label: "Dış Cephe",
     },
-    {
-      src: "/images/projects/mercan/1.jpg",
-      category: "Genel",
-      label: "Genel Görünüm",
-    },
-    {
-      src: "/images/projects/mercan/2.jpg",
-      category: "Genel",
-      label: "Genel Görünüm",
-    },
   ],
   otherProjects: ["gozde-sitesi", "galaxy"],
 },
@@ -233,17 +223,87 @@ export const projects: Project[] = [
   type: "Konut",
   capacity: "48 Daire",
   location: "Silivri, İstanbul",
-  heroImage: "/images/projects/yeni-1/hero.jpg",
-  mainImage: "/images/projects/yeni-1/hero.jpg",
+heroImage: "/images/projects/yeni-1/imgdownloader-c00e963f.png",
+mainImage: "/images/projects/yeni-1/imgdownloader-c00e963f.png",
   description:
     "Yakında satışa çıkacak yeni nesil yaşam projesi.",
   gallery: [
-    {
-      src: "/images/projects/yeni-1/hero.jpg",
-      category: "Proje",
-      label: "Hero",
-    },
-  ],
+  {
+    src: "/images/projects/yeni-1/imgdownloader-c00e963f.png",
+    category: "Dış Cephe",
+    label: "Ön Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-98fb3ea0.jpeg",
+    category: "Dış Cephe",
+    label: "Yan Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-fe62e5ed.png",
+    category: "Dış Cephe",
+    label: "Genel Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-6ed36c65.jpeg",
+    category: "Dış Cephe",
+    label: "Gündüz Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-d7350a4c.png",
+    category: "Dış Cephe",
+    label: "Gece Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-69c33942.png",
+    category: "Dış Cephe",
+    label: "Gece Genel Görünüm",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-1e85e48d.png",
+    category: "Dış Cephe",
+    label: "Akşam Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-ec51d07a.png",
+    category: "Dış Cephe",
+    label: "Arka Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-cfa306df.png",
+    category: "Dış Cephe",
+    label: "Perspektif Cephe",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-0ac790a5.png",
+    category: "Konum",
+    label: "Konum Haritası",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-5da10a1e.png",
+    category: "Plan",
+    label: "Salon Planı",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-21c3351f.png",
+    category: "Plan",
+    label: "Yatak Odası Planı",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-19bc7806.png",
+    category: "Plan",
+    label: "Daire Planı",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-d58ef35b.png",
+    category: "Plan",
+    label: "Banyo Planı",
+  },
+  {
+    src: "/images/projects/yeni-1/imgdownloader-9fe215fd.jpeg",
+    category: "Çocuk Odası",
+    label: "Çocuk Odası",
+  },
+],
   otherProjects: ["galaxy", "inci-konaklari"],
 },
 
