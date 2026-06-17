@@ -140,7 +140,7 @@ export const projects: Project[] = [
     otherProjects: ["galaxy", "inci-konaklari"],
   },
   {
-  slug: "gozde-sitesi",
+  slug: "gozde",
   title: "Gözde Sitesi",
   status: "Teslim Edildi",
   type: "Konut",
