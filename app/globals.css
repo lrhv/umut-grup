@@ -16,6 +16,10 @@ body {
     margin-left: 5px;
     margin-right: 5px;
   }
+  header {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .font-body {
