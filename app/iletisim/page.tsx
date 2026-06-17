@@ -4,27 +4,36 @@ import Footer from "@/components/layout/Footer";
 import {
   ChevronRight,
   Clock3,
-  Mail,
   MapPin,
   MessageCircle,
   Phone,
   Send,
 } from "lucide-react";
 import { siteInfo } from "@/data/siteData";
+import { publicPath } from "@/lib/paths";
+
+function InstagramSvg({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" />
+    </svg>
+  );
+}
 
 export default function ContactPage() {
   return (
     <main className="bg-[#f6f3ed] text-[#101010]">
       <Header />
 
-      <section className="relative flex min-h-[400px] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[430px] items-center justify-center overflow-hidden">
         <Image
-          src="/images/projects/inci/hero.jpg"
+          src={publicPath("/images/about-hero.jpg")}
           alt="Satış Ofisi"
           fill
           priority
           className="object-cover"
         />
+
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 px-4 text-center">
@@ -33,7 +42,7 @@ export default function ContactPage() {
             BİZE ULAŞIN
           </div>
 
-          <h1 className="font-display text-[clamp(3.5rem,7vw,5.6rem)] font-semibold leading-none text-white">
+          <h1 className="font-display text-[clamp(3.2rem,7vw,5.6rem)] font-semibold leading-none text-white">
             Satış Ofisi
           </h1>
 
@@ -44,12 +53,28 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-white px-4 py-10 sm:px-6 lg:px-7">
-        <div className="mx-auto grid max-w-[1440px] gap-5 md:grid-cols-4">
-          <InfoCard icon={<MessageCircle />} title="WhatsApp" text="0530 417 32 71
-" green />
-          <InfoCard icon={<Phone />} title="Telefon 1" text="0538 798 34 48
-" />
-          <InfoCard icon={<Phone />} title="Telefon 2" text="0538 798 34 48" />
+        <div className="mx-auto grid max-w-[1440px] gap-5 md:grid-cols-3">
+          <InfoLink
+            href={siteInfo.whatsappUrl}
+            icon={<MessageCircle />}
+            title="WhatsApp"
+            text={siteInfo.phonePrimary}
+            green
+          />
+
+          <InfoLink
+            href={`tel:${siteInfo.phonePrimary.replaceAll(" ", "")}`}
+            icon={<Phone />}
+            title="Telefon 1"
+            text={siteInfo.phonePrimary}
+          />
+
+          <InfoLink
+            href={`tel:${siteInfo.phoneSecondary.replaceAll(" ", "")}`}
+            icon={<Phone />}
+            title="Telefon 2"
+            text={siteInfo.phoneSecondary}
+          />
         </div>
       </section>
 
@@ -77,13 +102,16 @@ export default function ContactPage() {
                 <label className="mb-3 block font-body text-sm tracking-[0.12em] text-[#6f6252]">
                   İLGİLENDİĞİNİZ PROJE
                 </label>
+
                 <select className="h-[58px] w-full rounded-md border border-[#ded8cc] bg-[#f6f3ed] px-5 font-body text-[17px] outline-none transition focus:border-[#d1ad43]">
                   <option>Proje Bilgi Talebi</option>
-                  <option>Projeler Galaxy</option>
+                  <option>Galaxy</option>
                   <option>İnci Konakları</option>
                   <option>Huzur Konakları</option>
                   <option>Gözde Sitesi</option>
                   <option>Mercan Park</option>
+                  <option>Yeni Proje 1</option>
+                  <option>Yeni Proje 2</option>
                 </select>
               </div>
 
@@ -91,29 +119,25 @@ export default function ContactPage() {
                 <label className="mb-3 block font-body text-sm tracking-[0.12em] text-[#6f6252]">
                   MESAJINIZ
                 </label>
+
                 <textarea
                   placeholder="Merak ettiğiniz konuları buraya yazabilirsiniz..."
                   className="min-h-[135px] w-full resize-none rounded-md border border-[#ded8cc] bg-[#f6f3ed] px-5 py-4 font-body text-[17px] outline-none transition focus:border-[#d1ad43]"
                 />
               </div>
 
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center gap-3 rounded-md bg-[#d1ad43] px-8 py-5 font-body text-lg font-semibold text-white transition hover:bg-[#c39f35]"
+              <a
+                href={siteInfo.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-3 rounded-md bg-[#25d366] px-8 py-5 font-body text-lg font-semibold text-white transition hover:bg-[#20bd5a]"
               >
                 <Send size={19} />
-                Mesajı Gönder
-              </button>
+                WhatsApp&apos;tan Mesaj Gönder
+              </a>
 
               <p className="text-center font-body text-[#6f6252]">
-                veya direkt{" "}
-                <a
-                  href={siteInfo.whatsappUrl}
-                  target="_blank"
-                  className="font-semibold text-[#25d366]"
-                >
-                  WhatsApp&apos;tan yazın →
-                </a>
+                En hızlı dönüş için direkt WhatsApp&apos;tan yazabilirsiniz.
               </p>
             </form>
           </div>
@@ -125,20 +149,49 @@ export default function ContactPage() {
               </h2>
 
               <div className="mt-8 space-y-7">
-                <ContactRow icon={<MapPin />} title="ADRES" text={siteInfo.address} />
-                <ContactRow icon={<Phone />} title="TELEFON 1" text="0538 798 34 48
-" />
-                <ContactRow icon={<Phone />} title="TELEFON 2" text="0538 798 34 48" />
-                
-                <ContactRow icon={<Clock3 />} title="ÇALIŞMA SAATLERİ" text="Hafta içi: 09:00 – 18:00" />
+                <ContactRow
+                  icon={<MapPin />}
+                  title="ADRES"
+                  text={siteInfo.address}
+                />
+
+                <ContactRow
+                  icon={<Phone />}
+                  title="TELEFON 1"
+                  text={siteInfo.phonePrimary}
+                />
+
+                <ContactRow
+                  icon={<Phone />}
+                  title="TELEFON 2"
+                  text={siteInfo.phoneSecondary}
+                />
+
+                <ContactRow
+                  icon={<Clock3 />}
+                  title="ÇALIŞMA SAATLERİ"
+                  text="Hafta içi: 09:00 – 18:00"
+                />
               </div>
             </div>
 
             <div className="rounded-md border border-[#e1d8ca] bg-white p-8 shadow-sm">
-              <h2 className="font-display text-3xl font-semibold">Sosyal Medya</h2>
+              <h2 className="font-display text-3xl font-semibold">
+                Sosyal Medya
+              </h2>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                <SocialBox icon={<MessageCircle />} title="WhatsApp" />
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <SocialBox
+                  href={siteInfo.whatsappUrl}
+                  icon={<MessageCircle />}
+                  title="WhatsApp"
+                />
+
+                <SocialBox
+                  href="https://www.instagram.com/umut_group_insaat"
+                  icon={<InstagramSvg />}
+                  title="Instagram"
+                />
               </div>
             </div>
 
@@ -152,25 +205,26 @@ export default function ContactPage() {
               <a
                 href={siteInfo.whatsappUrl}
                 target="_blank"
-                className="mt-7 flex items-center justify-between rounded-md bg-[#25d366] px-6 py-5 font-body text-lg font-semibold text-white"
+                rel="noopener noreferrer"
+                className="mt-7 flex items-center justify-between rounded-md bg-[#25d366] px-6 py-5 font-body text-lg font-semibold text-white transition hover:bg-[#20bd5a]"
               >
                 <span className="flex items-center gap-3">
                   <MessageCircle />
-                  0538 798 34 48
-
+                  {siteInfo.phonePrimary}
                 </span>
+
                 <ChevronRight />
               </a>
 
               <a
-                href="https://api.whatsapp.com/send?phone=905468171410"
-                target="_blank"
-                className="mt-3 flex items-center justify-between rounded-md border border-white/15 px-6 py-5 font-body text-lg font-semibold text-white"
+                href={`tel:${siteInfo.phonePrimary.replaceAll(" ", "")}`}
+                className="mt-3 flex items-center justify-between rounded-md border border-white/15 px-6 py-5 font-body text-lg font-semibold text-white transition hover:bg-white hover:text-black"
               >
                 <span className="flex items-center gap-3">
-                  <MessageCircle />
-                  0538 798 34 48
+                  <Phone />
+                  Hemen Ara
                 </span>
+
                 <ChevronRight />
               </a>
             </div>
@@ -188,9 +242,9 @@ export default function ContactPage() {
             />
           </div>
 
-          <div className="relative min-h-[420px] overflow-hidden rounded-md bg-[#181818] p-10 text-white">
+          <div className="relative min-h-[420px] overflow-hidden rounded-md bg-[#181818] p-8 text-white sm:p-10">
             <Image
-              src="/images/contact-office.jpg"
+              src={publicPath("/images/about-hero.jpg")}
               alt="Satış Ofisi"
               fill
               className="object-cover opacity-35"
@@ -203,25 +257,27 @@ export default function ContactPage() {
 
               <div className="mt-8 space-y-5 font-body text-lg">
                 <p className="flex gap-3">
-                  <MapPin className="text-[#d1ad43]" />
-                  Yeni Mah. Mehmet Silivri Caddesi <br />
-                  Aktaş Sok. No:1 Silivri
+                  <MapPin className="shrink-0 text-[#d1ad43]" />
+                  <span>{siteInfo.address}</span>
                 </p>
 
                 <p className="flex gap-3">
-                  <Phone className="text-[#d1ad43]" />
-                  0538 798 34 48
- <br />
-                  0538 798 34 48
+                  <Phone className="shrink-0 text-[#d1ad43]" />
+                  <span>
+                    {siteInfo.phonePrimary}
+                    <br />
+                    {siteInfo.phoneSecondary}
+                  </span>
                 </p>
 
                 <p className="flex gap-3">
-                  instagram: umut_group_insaat
+                  <InstagramSvg size={20} />
+                  <span>{siteInfo.instagram}</span>
                 </p>
 
                 <p className="flex gap-3">
-                  <Clock3 className="text-[#d1ad43]" />
-                  Hft içi 09:00–18:00 · Cmt 10:00–16:00
+                  <Clock3 className="shrink-0 text-[#d1ad43]" />
+                  <span>Hafta içi 09:00–18:00 · Cmt 10:00–16:00</span>
                 </p>
               </div>
 
@@ -229,15 +285,16 @@ export default function ContactPage() {
                 <a
                   href={siteInfo.whatsappUrl}
                   target="_blank"
-                  className="flex items-center justify-center gap-3 rounded-md bg-[#25d366] px-8 py-4 font-body font-semibold text-white"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 rounded-md bg-[#25d366] px-8 py-4 font-body font-semibold text-white transition hover:bg-[#20bd5a]"
                 >
                   <MessageCircle />
                   WhatsApp
                 </a>
 
                 <a
-                  href="tel:05318181446"
-                  className="flex items-center justify-center gap-3 rounded-md border border-white/25 bg-white/10 px-8 py-4 font-body font-semibold text-white"
+                  href={`tel:${siteInfo.phonePrimary.replaceAll(" ", "")}`}
+                  className="flex items-center justify-center gap-3 rounded-md border border-white/25 bg-white/10 px-8 py-4 font-body font-semibold text-white transition hover:bg-white hover:text-black"
                 >
                   <Phone />
                   Hemen Ara
@@ -253,38 +310,43 @@ export default function ContactPage() {
   );
 }
 
-function InfoCard({
+function InfoLink({
   icon,
   title,
   text,
+  href,
   green,
-  pink,
 }: {
   icon: React.ReactNode;
   title: string;
   text: string;
+  href: string;
   green?: boolean;
-  pink?: boolean;
 }) {
   return (
-    <div className="flex items-center gap-5 rounded-md border border-[#e1d8ca] bg-white p-6">
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      className="group flex items-center gap-5 rounded-md border border-[#e1d8ca] bg-white p-6 transition hover:border-[#d1ad43] hover:shadow-lg"
+    >
       <div
-        className={`flex h-14 w-14 items-center justify-center rounded-full ${
-          green
-            ? "bg-green-100 text-[#25d366]"
-            : pink
-            ? "bg-pink-100 text-pink-500"
-            : "bg-[#f6f3ed] text-[#d1ad43]"
+        className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${
+          green ? "bg-green-100 text-[#25d366]" : "bg-[#f6f3ed] text-[#d1ad43]"
         }`}
       >
         {icon}
       </div>
 
-      <div>
+      <div className="min-w-0 flex-1">
         <p className="font-body text-[#6f6252]">{title}</p>
-        <p className="mt-1 font-body text-lg font-semibold">{text}</p>
+        <p className="mt-1 break-words font-body text-lg font-semibold">
+          {text}
+        </p>
       </div>
-    </div>
+
+      <ChevronRight className="shrink-0 text-[#d1ad43] transition group-hover:translate-x-1" />
+    </a>
   );
 }
 
@@ -294,6 +356,7 @@ function Field({ label, placeholder }: { label: string; placeholder: string }) {
       <label className="mb-3 block font-body text-sm tracking-[0.12em] text-[#6f6252]">
         {label}
       </label>
+
       <input
         placeholder={placeholder}
         className="h-[58px] w-full rounded-md border border-[#ded8cc] bg-[#f6f3ed] px-5 font-body text-[17px] outline-none transition focus:border-[#d1ad43]"
@@ -316,10 +379,12 @@ function ContactRow({
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f6f3ed] text-[#d1ad43]">
         {icon}
       </div>
+
       <div>
         <p className="font-body text-sm tracking-[0.12em] text-[#7c6f5d]">
           {title}
         </p>
+
         <p className="mt-2 font-body text-lg font-medium">{text}</p>
       </div>
     </div>
@@ -329,12 +394,19 @@ function ContactRow({
 function SocialBox({
   icon,
   title,
+  href,
 }: {
   icon: React.ReactNode;
   title: string;
+  href: string;
 }) {
   return (
-    <a className="flex min-h-[100px] flex-col items-center justify-center rounded-md border border-[#ded8cc] bg-white text-[#7c6f5d] transition hover:border-[#d1ad43] hover:text-[#d1ad43]">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex min-h-[100px] flex-col items-center justify-center rounded-md border border-[#ded8cc] bg-white text-[#7c6f5d] transition hover:border-[#d1ad43] hover:text-[#d1ad43]"
+    >
       <div>{icon}</div>
       <p className="mt-3 font-body">{title}</p>
     </a>

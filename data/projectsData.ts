@@ -196,19 +196,19 @@ export const projects: Project[] = [
 },
 
 {
-  slug: "mercan-park",
+  slug: "mercan",
   title: "Mercan Park",
   status: "Teslim Edildi",
   type: "Konut",
   capacity: "42 Daire",
   location: "Silivri, İstanbul",
-  heroImage: "/images/projects/mercan/hero.jpg",
-  mainImage: "/images/projects/mercan/hero.jpg",
+  heroImage: "/images/projects/mercan/02_35_04.png",
+  mainImage: "/images/projects/mercan/02_35_04.png",
   description:
     "Mercan Park, sosyal yaşam alanları ve modern mimarisiyle öne çıkan seçkin bir yaşam projesidir.",
   gallery: [
     {
-      src: "/images/projects/mercan/hero.jpg",
+      src: "/images/projects/mercan/02_35_04.png",
       category: "Dış Cephe",
       label: "Dış Cephe",
     },
