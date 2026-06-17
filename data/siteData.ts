@@ -106,10 +106,21 @@ export const deliveredProjects = [
     active: false,
   },
 ];
-
 export const galleryItems = [
-  { title: "Yatak Odası", image: "/images/yatak.jpg" },
-  { title: "Mutfak", image: "/images/mutfak.jpg" },
-  { title: "Çocuk Odası", image: "/images/cocuk.jpg" },
-  { title: "Oturma Odası", image: "/images/oturma.jpg" },
+  {
+    title: "Mutfak",
+    image: "/images/projects/galaxy/mutfak.jpg",
+  },
+  {
+    title: "Salon",
+    image: "/images/projects/galaxy/salon.jpg",
+  },
+  {
+    title: "Yatak Odası",
+    image: "/images/projects/galaxy/yatak.jpg",
+  },
+  {
+    title: "Banyo",
+    image: "/images/projects/galaxy/banyo.jpg",
+  },
 ];
