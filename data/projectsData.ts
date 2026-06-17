@@ -124,6 +124,109 @@ export const projects: Project[] = [
     ],
     otherProjects: ["galaxy", "inci-konaklari"],
   },
+  {
+  slug: "gozde-sitesi",
+  title: "Gözde Sitesi",
+  status: "Teslim Edildi",
+  type: "Konut",
+  capacity: "28 Daire",
+  location: "Silivri, İstanbul",
+  heroImage: "/images/projects/gozde/hero.jpg",
+  mainImage: "/images/projects/gozde/hero.jpg",
+  description:
+    "Gözde Sitesi modern mimarisi ve ferah yaşam alanlarıyla tamamlanmış prestijli bir konut projesidir.",
+  gallery: [
+    {
+      src: "/images/projects/gozde/hero.jpg",
+      category: "Dış Cephe",
+      label: "Dış Cephe",
+    },
+    {
+      src: "/images/projects/gozde/1.jpg",
+      category: "Genel",
+      label: "Genel Görünüm",
+    },
+    {
+      src: "/images/projects/gozde/2.jpg",
+      category: "Genel",
+      label: "Genel Görünüm",
+    },
+  ],
+  otherProjects: ["mercan-park", "galaxy"],
+},
+
+{
+  slug: "mercan-park",
+  title: "Mercan Park",
+  status: "Teslim Edildi",
+  type: "Konut",
+  capacity: "42 Daire",
+  location: "Silivri, İstanbul",
+  heroImage: "/images/projects/mercan/hero.jpg",
+  mainImage: "/images/projects/mercan/hero.jpg",
+  description:
+    "Mercan Park, sosyal yaşam alanları ve modern mimarisiyle öne çıkan seçkin bir yaşam projesidir.",
+  gallery: [
+    {
+      src: "/images/projects/mercan/hero.jpg",
+      category: "Dış Cephe",
+      label: "Dış Cephe",
+    },
+    {
+      src: "/images/projects/mercan/1.jpg",
+      category: "Genel",
+      label: "Genel Görünüm",
+    },
+    {
+      src: "/images/projects/mercan/2.jpg",
+      category: "Genel",
+      label: "Genel Görünüm",
+    },
+  ],
+  otherProjects: ["gozde-sitesi", "galaxy"],
+},
+
+{
+  slug: "yeni-proje-1",
+  title: "Yeni Proje 1",
+  status: "Yakında",
+  type: "Konut",
+  capacity: "48 Daire",
+  location: "Silivri, İstanbul",
+  heroImage: "/images/projects/yeni-1/hero.jpg",
+  mainImage: "/images/projects/yeni-1/hero.jpg",
+  description:
+    "Yakında satışa çıkacak yeni nesil yaşam projesi.",
+  gallery: [
+    {
+      src: "/images/projects/yeni-1/hero.jpg",
+      category: "Proje",
+      label: "Hero",
+    },
+  ],
+  otherProjects: ["galaxy", "inci-konaklari"],
+},
+
+{
+  slug: "yeni-proje-2",
+  title: "Yeni Proje 2",
+  status: "Yakında",
+  type: "Konut",
+  capacity: "60 Daire",
+  location: "Silivri, İstanbul",
+  heroImage: "/images/projects/yeni-2/hero.jpg",
+  mainImage: "/images/projects/yeni-2/hero.jpg",
+  description:
+    "Yakında satışa çıkacak premium yaşam projesi.",
+  gallery: [
+    {
+      src: "/images/projects/yeni-2/hero.jpg",
+      category: "Proje",
+      label: "Hero",
+    },
+  ],
+  otherProjects: ["galaxy", "huzur-konaklari"],
+},
 ];
 
 export function getProjectBySlug(slug: string) {
