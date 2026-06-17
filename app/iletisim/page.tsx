@@ -45,8 +45,10 @@ export default function ContactPage() {
 
       <section className="bg-white px-4 py-10 sm:px-6 lg:px-7">
         <div className="mx-auto grid max-w-[1440px] gap-5 md:grid-cols-4">
-          <InfoCard icon={<MessageCircle />} title="WhatsApp" text="0531 818 14 46" green />
-          <InfoCard icon={<Phone />} title="Telefon 1" text="0531 818 14 46" />
+          <InfoCard icon={<MessageCircle />} title="WhatsApp" text="0530 417 32 71
+" green />
+          <InfoCard icon={<Phone />} title="Telefon 1" text="0538 798 34 48
+" />
           <InfoCard icon={<Phone />} title="Telefon 2" text="0546 817 14 10" />
         </div>
       </section>
@@ -124,7 +126,8 @@ export default function ContactPage() {
 
               <div className="mt-8 space-y-7">
                 <ContactRow icon={<MapPin />} title="ADRES" text={siteInfo.address} />
-                <ContactRow icon={<Phone />} title="TELEFON 1" text="0531 818 14 46" />
+                <ContactRow icon={<Phone />} title="TELEFON 1" text="0538 798 34 48
+" />
                 <ContactRow icon={<Phone />} title="TELEFON 2" text="0546 817 14 10" />
                 
                 <ContactRow icon={<Clock3 />} title="ÇALIŞMA SAATLERİ" text="Hafta içi: 09:00 – 18:00" />
@@ -153,7 +156,8 @@ export default function ContactPage() {
               >
                 <span className="flex items-center gap-3">
                   <MessageCircle />
-                  0531 818 14 46
+                  0538 798 34 48
+
                 </span>
                 <ChevronRight />
               </a>
@@ -206,7 +210,8 @@ export default function ContactPage() {
 
                 <p className="flex gap-3">
                   <Phone className="text-[#d1ad43]" />
-                  0531 818 14 46 <br />
+                  0538 798 34 48
+ <br />
                   0546 817 14 10
                 </p>
 
