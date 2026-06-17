@@ -151,22 +151,47 @@ export const projects: Project[] = [
   description:
     "Gözde Sitesi modern mimarisi ve ferah yaşam alanlarıyla tamamlanmış prestijli bir konut projesidir.",
   gallery: [
-    {
-      src: "/images/projects/gozde/hero.jpg",
-      category: "Dış Cephe",
-      label: "Dış Cephe",
-    },
-    {
-      src: "/images/projects/gozde/1.jpg",
-      category: "Genel",
-      label: "Genel Görünüm",
-    },
-    {
-      src: "/images/projects/gozde/2.jpg",
-      category: "Genel",
-      label: "Genel Görünüm",
-    },
-  ],
+  {
+    src: "/images/projects/gozde/hero.jpg",
+    category: "Dış Cephe",
+    label: "Gözde Sitesi Dış Cephe",
+  },
+  {
+    src: "/images/projects/gozde/1.jpg",
+    category: "Dış Cephe",
+    label: "Cephe Görünümü",
+  },
+  {
+    src: "/images/projects/gozde/2.jpg",
+    category: "Tanıtım",
+    label: "Proje Tanıtım Görseli",
+  },
+  {
+    src: "/images/projects/gozde/3.jpg",
+    category: "Yatak Odası",
+    label: "Yatak Odası",
+  },
+  {
+    src: "/images/projects/gozde/4.jpg",
+    category: "Salon",
+    label: "Salon",
+  },
+  {
+    src: "/images/projects/gozde/5.jpg",
+    category: "Banyo",
+    label: "Banyo",
+  },
+  {
+    src: "/images/projects/gozde/6.jpg",
+    category: "Dış Cephe",
+    label: "Proje Genel Görünüm",
+  },
+  {
+    src: "/images/projects/gozde/7.jpg",
+    category: "Mutfak",
+    label: "Mutfak",
+  },
+],
   otherProjects: ["mercan-park", "galaxy"],
 },
 

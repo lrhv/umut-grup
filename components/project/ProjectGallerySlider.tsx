@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { publicPath } from "@/lib/paths";
 
 type GalleryImage = {
   src: string;
@@ -63,10 +64,10 @@ export default function ProjectGallerySlider({
   if (!activeImage) return null;
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full min-w-0 overflow-hidden">
       <div className="relative h-[320px] overflow-hidden rounded-md sm:h-[520px] lg:h-[620px]">
         <Image
-          src={activeImage.src}
+          src={publicPath(activeImage.src)}
           alt={activeImage.label}
           fill
           priority
@@ -121,7 +122,7 @@ export default function ProjectGallerySlider({
               }`}
             >
               <Image
-                src={img.src}
+                src={publicPath(img.src)}
                 alt={img.label}
                 fill
                 className="object-cover"
