@@ -20,6 +20,10 @@ export const navLinks = [
     href: "/umut-grup/hakkimizda",
   },
   {
+    label: "Projeler",
+    href: "/umut-grup/projeler",
+  },
+  {
     label: "Galaxy",
     href: "/umut-grup/projeler/galaxy",
   },
