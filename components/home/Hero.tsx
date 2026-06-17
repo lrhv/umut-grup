@@ -1,5 +1,6 @@
-import { ArrowRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { siteInfo } from "@/data/siteData";
+import { publicPath } from "@/lib/paths";
 
 function InstagramSvg({ size = 15 }: { size?: number }) {
   return (
@@ -11,14 +12,8 @@ function InstagramSvg({ size = 15 }: { size?: number }) {
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden"
-    >
-     
-
-      {/* VIDEO */}
-     <video
+    <section id="home" className="relative overflow-hidden">
+      <video
         autoPlay
         muted
         loop
@@ -26,15 +21,15 @@ export default function Hero() {
         preload="auto"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
+        <source src={publicPath("/videos/hero-video.mp4")} type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/45" />
-      {/* İÇERİK */}
-      <div className="relative z-10 flex min-h-[105vh] items-center px-7 py-32">
+
+      <div className="relative z-10 flex min-h-[105vh] items-center px-4 py-28 sm:px-6 sm:py-32 lg:px-7">
         <div className="max-w-[820px]">
-          <div className="mb-7 flex items-center gap-4 font-body text-[14px] tracking-[0.45em] text-[#c9a84c]">
-            <span className="h-px w-11 bg-[#c9a84c]" />
+          <div className="mb-7 flex items-center gap-4 font-body text-[12px] tracking-[0.25em] text-[#c9a84c] sm:text-[14px] sm:tracking-[0.45em]">
+            <span className="h-px w-9 bg-[#c9a84c] sm:w-11" />
             İNŞAAT VE GAYRİMENKUL DANIŞMANLIĞI
           </div>
 
@@ -45,9 +40,7 @@ export default function Hero() {
           <h1 className="mt-5 font-display text-[clamp(2.8rem,7vw,5.5rem)] font-medium leading-[0.95] text-white">
             Geleceğe
             <br />
-            <span className="italic text-[#c9a84c]">
-              Umut&apos;la
-            </span>{" "}
+            <span className="italic text-[#c9a84c]">Umut&apos;la</span>{" "}
             Bakın
           </h1>
 
@@ -55,16 +48,15 @@ export default function Hero() {
             Look to the future with hope.
           </p>
 
-          <p className="mt-4 max-w-[760px] font-body text-[20px] leading-9 text-white/70">
-            Silivri&apos;de güvenli yatırımın adresi.
-            Güven, vizyon ve değer üretme anlayışıyla
-            seçkin gayrimenkul yatırımlarına yön veriyoruz.
+          <p className="mt-4 max-w-[760px] font-body text-[18px] leading-8 text-white/70 sm:text-[20px] sm:leading-9">
+            Silivri&apos;de güvenli yatırımın adresi. Güven, vizyon ve değer
+            üretme anlayışıyla seçkin gayrimenkul yatırımlarına yön veriyoruz.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="flex items-center gap-3 rounded-md bg-[#d1ad43] px-9 py-5 font-body text-[14px] font-semibold text-white transition-all duration-300 hover:bg-[#c39f35]"
+              className="flex items-center gap-3 rounded-md bg-[#d1ad43] px-7 py-4 font-body text-[14px] font-semibold text-white transition-all duration-300 hover:bg-[#c39f35] sm:px-9 sm:py-5"
             >
               Projeleri İncele
               <ArrowRight size={20} />
@@ -74,7 +66,7 @@ export default function Hero() {
               href={siteInfo.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-md border border-white/25 bg-black/10 px-9 py-5 font-body text-[14px] font-semibold text-white transition-all duration-300 hover:bg-white hover:text-black"
+              className="flex items-center gap-3 rounded-md border border-white/25 bg-black/10 px-7 py-4 font-body text-[14px] font-semibold text-white transition-all duration-300 hover:bg-white hover:text-black sm:px-9 sm:py-5"
             >
               <MessageCircle size={22} />
               WhatsApp
@@ -83,8 +75,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ALT 4 BUTON */}
-      <div className="relative z-20 mx-7 grid overflow-hidden shadow-lg md:grid-cols-4">
+      <div className="relative z-20 mx-4 grid overflow-hidden rounded-md shadow-lg sm:mx-6 md:grid-cols-4 lg:mx-7">
         <a
           href="https://api.whatsapp.com/send?phone=905304173271&text=Merhaba%20Ben%20F%C4%B1rat%20nas%C4%B1l%20yard%C4%B1mc%C4%B1%20olabilirim"
           target="_blank"
@@ -112,10 +103,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="bg-[#213f75] px-5 py-3 text-center font-body text-sm font-semibold text-white transition-all duration-300 hover:brightness-95"
         >
-          <p className="flex items-center justify-center gap-2">
-            
           UMUT EMLAK İLANLAR
-          </p>
         </a>
 
         <a
@@ -125,8 +113,8 @@ export default function Hero() {
           className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 px-5 py-3 text-center font-body text-sm font-semibold text-white transition-all duration-300 hover:brightness-95"
         >
           <p className="flex items-center justify-center gap-2">
-          <InstagramSvg />
-          TAKİP ET
+            <InstagramSvg />
+            TAKİP ET
           </p>
         </a>
       </div>

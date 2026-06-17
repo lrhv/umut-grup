@@ -44,11 +44,11 @@ export const navLinks = [
     href: "/umut-grup/projeler/yeni-proje-1",
   },
    {
-    label: "Yeni Proje 1",
+    label: "Yeni Proje 2",
     href: "/umut-grup/projeler/yeni-proje-2",
   },
    {
-    label: "Yeni Proje 1",
+    label: "İletişim",
     href: "/umut-grup/iletisim",
   },
 ];
