@@ -86,28 +86,40 @@ export const featuredProjects = [
 
 export const deliveredProjects = [
   {
-    title: "Gözde Sitesi",
-    detail: "Teslim Edildi",
-    href: "/projeler/gozde-sitesi",
+    title: "Huzur Konakları",
+    detail: "56 Daire · 2 Dükkan",
+    href: "/projeler/huzur-konaklari",
+    active: true,
+  },
+  {
+    title: "Green Garden",
+    detail: "54 Daire · 3 Dükkan",
+    href: "/projeler/green-garden",
+    active: true,
+  },
+  {
+    title: "İnci Konakları",
+    detail: "36 Daire",
+    href: "/projeler/inci-konaklari",
     active: true,
   },
   {
     title: "Mercan Park",
-    detail: "Teslim Edildi",
+    detail: "18 Daire",
     href: "/projeler/mercan-park",
     active: true,
   },
   {
-    title: "Yeni Proje 1",
-    detail: "Detayları İncele",
-    href: "/projeler/yeni-proje-1",
-    active: false,
+    title: "Gözde Sitesi",
+    detail: "112 Daire · 8 Dükkan",
+    href: "/projeler/gozde-sitesi",
+    active: true,
   },
   {
     title: "Galaxy",
-    detail: "Detayları İncele",
+    detail: "12 Daire · 4 Dükkan",
     href: "/projeler/galaxy",
-    active: false,
+    active: true,
   },
 ];
 export const galleryItems = [

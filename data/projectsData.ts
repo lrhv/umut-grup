@@ -314,17 +314,107 @@ mainImage: "/images/projects/yeni-1/imgdownloader-c00e963f.png",
   type: "Konut",
   capacity: "60 Daire",
   location: "Silivri, İstanbul",
-  heroImage: "/images/projects/yeni-2/hero.jpg",
-  mainImage: "/images/projects/yeni-2/hero.jpg",
+heroImage: "/images/projects/yeni-2/imgdownloader-ba3e00ce.png",
+mainImage: "/images/projects/yeni-2/imgdownloader-ba3e00ce.png",
   description:
     "Yakında satışa çıkacak premium yaşam projesi.",
   gallery: [
-    {
-      src: "/images/projects/yeni-2/hero.jpg",
-      category: "Proje",
-      label: "Hero",
-    },
-  ],
+  {
+    src: "/images/projects/yeni-2/imgdownloader-bf4dd5c3.png",
+    category: "Dış Cephe",
+    label: "Ön Cephe",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-865a2275.jpeg",
+    category: "Dış Cephe",
+    label: "Ön Perspektif",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-ba3e00ce.png",
+    category: "Dış Cephe",
+    label: "Yan Perspektif",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-a8660ddb.png",
+    category: "Dış Cephe",
+    label: "Köşe Perspektifi",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-db7b0fc1.png",
+    category: "Dış Cephe",
+    label: "Cadde Cephesi",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-157e17ab.png",
+    category: "Dış Cephe",
+    label: "Gündüz Görünümü",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-ae798099.png",
+    category: "Dış Cephe",
+    label: "Ana Cephe",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-c966a1fd.jpeg",
+    category: "Gece Görünümü",
+    label: "Gece Perspektifi",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-f981bfc4.png",
+    category: "Gece Görünümü",
+    label: "Akşam Görünümü",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-d990deac.png",
+    category: "Gece Görünümü",
+    label: "Gece Genel Görünüm",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-cf00493a.png",
+    category: "Gece Görünümü",
+    label: "Aydınlatılmış Cephe",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-c58b0d72.png",
+    category: "Gece Görünümü",
+    label: "Gece Ön Cephe",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-ff35f462.png",
+    category: "Gece Görünümü",
+    label: "Gece Köşe Görünümü",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-f4b9d33d.png",
+    category: "Vaziyet Planı",
+    label: "Vaziyet Planı",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-9a106aa3.png",
+    category: "Kat Planı",
+    label: "Kat Planı",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-37a08abc.png",
+    category: "Kat Planı",
+    label: "Daire Planı",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-9d51b291.jpeg",
+    category: "İç Mekan",
+    label: "Salon",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-9fe215fd.jpeg",
+    category: "İç Mekan",
+    label: "Yatak Odası",
+  },
+  {
+    src: "/images/projects/yeni-2/imgdownloader-c83648cd.png",
+    category: "Kurumsal",
+    label: "Proje Logosu",
+  },
+],
   otherProjects: ["galaxy", "huzur-konaklari"],
 },
 ];
