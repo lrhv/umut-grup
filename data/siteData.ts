@@ -81,12 +81,24 @@ export const featuredProjects = [
 ];
 
 export const deliveredProjects = [
-  { title: "Huzur Konakları", detail: "56 Daire · 2 Dükkan" },
-  { title: "Green Garden", detail: "54 Daire · 3 Dükkan", active: true },
-  { title: "İnci Konakları", detail: "36 Daire" },
-  { title: "Mercan Park", detail: "18 Daire" },
-  { title: "Gözde Sitesi", detail: "112 Daire · 8 Dükkan" },
-  { title: "Galaxy", detail: "12 Daire · 4 Dükkan" },
+  {
+    title: "Gözde Sitesi",
+    detail: "Teslim Edildi",
+    href: "/projeler/gozde-sitesi",
+    active: true,
+  },
+  {
+    title: "Mercan Park",
+    detail: "Teslim Edildi",
+    href: "/projeler/mercan-park",
+    active: true,
+  },
+  {
+    title: "Yeni Proje 1",
+    detail: "Detayları İncele",
+    href: "/projeler/yeni-proje-1",
+    active: false,
+  },
 ];
 
 export const galleryItems = [
