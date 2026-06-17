@@ -1,7 +1,14 @@
+import Link from "next/link";
 import { deliveredProjects, featuredProjects, siteInfo } from "@/data/siteData";
 import { MapPin, MessageCircle, Phone, TrendingUp } from "lucide-react";
 
-function InstagramSvg({ size = 18, className = "" }) {
+function InstagramSvg({
+  size = 18,
+  className = "",
+}: {
+  size?: number;
+  className?: string;
+}) {
   return (
     <svg
       width={size}
@@ -19,9 +26,9 @@ function InstagramSvg({ size = 18, className = "" }) {
 export default function Footer() {
   return (
     <footer className="bg-[#181818] text-[#847966]">
-      <div className="grid gap-14 px-7 py-20 md:grid-cols-4">
+      <div className="grid gap-14 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-7 lg:py-20">
         <div>
-          <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-md border-2 border-[#d1ad43] text-[#d1ad43]">
               <TrendingUp size={24} />
             </div>
@@ -32,20 +39,32 @@ export default function Footer() {
               </h3>
               <p className="text-xs tracking-[4px]">{siteInfo.subtitle}</p>
             </div>
-          </div>
+          </Link>
 
           <p className="mt-8 max-w-xs leading-7">
             Geleceğe umutla bakın. Silivri&apos;de güvenli yatırımın adresi.
           </p>
 
           <div className="mt-8 flex gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 text-[#d1ad43]">
+            <a
+              href="https://www.instagram.com/umut_group_insaat?igsh=bzFwN2dvaXVxNnJk&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 text-[#d1ad43] transition hover:border-[#d1ad43] hover:bg-[#d1ad43] hover:text-white"
+            >
               <InstagramSvg size={18} />
-            </span>
+            </a>
 
-            <span className="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 text-[#d1ad43]">
+            <a
+              href={siteInfo.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 text-[#d1ad43] transition hover:border-[#25d366] hover:bg-[#25d366] hover:text-white"
+            >
               <MessageCircle size={18} />
-            </span>
+            </a>
           </div>
         </div>
 
@@ -56,12 +75,42 @@ export default function Footer() {
 
           <div className="space-y-4">
             {featuredProjects.map((p) => (
-              <p key={p.title}>{p.title}</p>
+              <Link
+                key={p.title}
+                href={p.href}
+                className="block transition hover:text-[#d1ad43]"
+              >
+                {p.title}
+              </Link>
             ))}
-            <p>Gözde Sitesi</p>
-            <p>Mercan Park</p>
-            <p>Yeni Proje 1</p>
-            <p>Yeni Proje 2</p>
+
+            <Link
+              href="/projeler/gozde-sitesi"
+              className="block transition hover:text-[#d1ad43]"
+            >
+              Gözde Sitesi
+            </Link>
+
+            <Link
+              href="/projeler/mercan-park"
+              className="block transition hover:text-[#d1ad43]"
+            >
+              Mercan Park
+            </Link>
+
+            <Link
+              href="/projeler/yeni-proje-1"
+              className="block transition hover:text-[#d1ad43]"
+            >
+              Yeni Proje 1
+            </Link>
+
+            <Link
+              href="/projeler/yeni-proje-2"
+              className="block transition hover:text-[#d1ad43]"
+            >
+              Yeni Proje 2
+            </Link>
           </div>
         </div>
 
@@ -72,9 +121,13 @@ export default function Footer() {
 
           <div className="space-y-4">
             {deliveredProjects.map((p) => (
-              <p key={p.title}>
+              <Link
+                key={p.title}
+                href={p.href}
+                className="block transition hover:text-[#d1ad43]"
+              >
                 {p.title} — {p.detail}
-              </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -89,26 +142,36 @@ export default function Footer() {
             {siteInfo.address}
           </p>
 
-          <p className="mt-7 flex items-center gap-3">
+          <a
+            href={`tel:${siteInfo.phonePrimary.replaceAll(" ", "")}`}
+            className="mt-7 flex items-center gap-3 transition hover:text-[#d1ad43]"
+          >
             <Phone size={18} className="text-[#d1ad43]" />
             {siteInfo.phonePrimary}
-          </p>
+          </a>
 
-          <p className="mt-3 flex items-center gap-3">
+          <a
+            href={`tel:${siteInfo.phoneSecondary.replaceAll(" ", "")}`}
+            className="mt-3 flex items-center gap-3 transition hover:text-[#d1ad43]"
+          >
             <Phone size={18} className="text-[#d1ad43]" />
             {siteInfo.phoneSecondary}
-          </p>
+          </a>
 
-          <p className="mt-7 flex items-center gap-3">
+          <a
+            href="https://www.instagram.com/umut_group_insaat?igsh=bzFwN2dvaXVxNnJk&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 flex items-center gap-3 transition hover:text-[#d1ad43]"
+          >
             <InstagramSvg size={18} className="text-[#d1ad43]" />
             {siteInfo.instagram}
-          </p>
+          </a>
         </div>
       </div>
 
-      <div className="border-t border-white/10 px-7 py-7 text-sm">
-        © 2024 Umut Group İnşaat ve Gayrimenkul Danışmanlığı. Tüm hakları
-        saklıdır.
+      <div className="border-t border-white/10 px-4 py-7 text-sm sm:px-6 lg:px-7">
+        © Umut Group İnşaat ve Gayrimenkul Danışmanlığı. Tüm hakları saklıdır.
       </div>
     </footer>
   );
