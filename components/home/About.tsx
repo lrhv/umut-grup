@@ -47,7 +47,7 @@ export default function About() {
         </p>
 
         <Button
-          href="/hakkimizda"
+          href="/umut-grup/hakkimizda"
           variant="dark"
           arrow
           className="mt-9 w-fit"
