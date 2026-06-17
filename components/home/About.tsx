@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="grid gap-20 px-7 py-28 lg:grid-cols-2">
       <div className="relative">
-        <img src="/images/about.jpg" alt="Umut Group İnşaat" className="h-[575px] w-full rounded-md object-cover" />
+        <img src="/images/inci/hero.jpg" alt="Umut Group İnşaat" className="h-[575px] w-full rounded-md object-cover" />
         <div className="absolute bottom-[-25px] right-[-25px] rounded-md bg-[#d1ad43] p-8 text-white shadow-2xl max-md:right-5">
           <strong className="font-display text-4xl">16+</strong>
           <p className="mt-2">Yıllık Tecrübe</p>

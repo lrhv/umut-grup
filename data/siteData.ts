@@ -43,29 +43,40 @@ export const navLinks = [
     label: "Yeni Proje 1",
     href: "/umut-grup/projeler/yeni-proje-1",
   },
+   {
+    label: "Yeni Proje 1",
+    href: "/umut-grup/projeler/yeni-proje-2",
+  },
+   {
+    label: "Yeni Proje 1",
+    href: "/umut-grup/iletisim",
+  },
 ];
 
 export const featuredProjects = [
   {
-    title: "Projeler Galaxy",
-    description: "Lüksün Zirvesinde Bir Yaşam",
-    location: "Silivri, İstanbul",
-    type: "Konut",
-    image: "/images/galaxy.jpg",
+    title: "Galaxy",
+    type: "Konut Projesi",
+    location: "Silivri / İstanbul",
+    description: "Silivri’nin merkezinde modern, konforlu ve güvenli yaşam alanı.",
+    image: "/images/projects/galaxy/hero.jpg",
+    href: "/projeler/galaxy",
   },
   {
     title: "İnci Konakları",
-    description: "Doğayla İç İçe Konforlu Yaşam",
-    location: "Silivri, İstanbul",
-    type: "Konut",
-    image: "/images/inci.jpg",
+    type: "Konut Projesi",
+    location: "Silivri / İstanbul",
+    description: "Aile yaşamına uygun, ferah ve prestijli konut projesi.",
+    image: "/images/projects/inci/hero.jpg",
+    href: "/projeler/inci-konaklari",
   },
   {
     title: "Huzur Konakları",
-    description: "Aileniz İçin Huzurlu Bir Yuva",
-    location: "Silivri, İstanbul",
-    type: "Konut",
-    image: "/images/huzur.jpg",
+    type: "Konut Projesi",
+    location: "Silivri / İstanbul",
+    description: "Sakin, güvenli ve huzurlu bir yaşam için tasarlanmış özel proje.",
+    image: "/images/projects/huzur/hero.jpg",
+    href: "/projeler/huzur-konaklari",
   },
 ];
 
