@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -6,6 +7,7 @@ import { getProjectBySlug, projects } from "@/data/projectsData";
 import { ChevronLeft, MapPin, MessageCircle, Phone } from "lucide-react";
 import { siteInfo } from "@/data/siteData";
 import ProjectGallerySlider from "@/components/project/ProjectGallerySlider";
+import { publicPath } from "@/lib/paths";
 
 type PageProps = {
   params: Promise<{
@@ -31,7 +33,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
       <section className="relative min-h-[520px] overflow-hidden">
         <Image
-          src={project.heroImage}
+          src={publicPath(project.heroImage)}
           alt={project.title}
           fill
           priority
@@ -42,13 +44,13 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
         <div className="relative z-10 flex min-h-[520px] items-end px-4 pb-20 sm:px-6 lg:px-8">
           <div className="w-full max-w-[1440px]">
-            <a
-              href="/#projects"
+            <Link
+              href="/projeler"
               className="mb-8 flex items-center gap-2 font-body text-lg text-white/70 transition hover:text-white"
             >
               <ChevronLeft size={18} />
               Tüm Projeler
-            </a>
+            </Link>
 
             <div className="mb-8 flex flex-wrap gap-3">
               <span className="rounded-md bg-[#d1ad43] px-4 py-2 font-body text-sm font-semibold text-white">
@@ -164,13 +166,13 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
             {otherProjects.map((item) =>
               item ? (
-                <a
+                <Link
                   href={`/projeler/${item.slug}`}
                   key={item.slug}
                   className="group relative h-[240px] overflow-hidden rounded-md sm:h-[260px]"
                 >
                   <Image
-                    src={item.heroImage}
+                    src={publicPath(item.heroImage)}
                     alt={item.title}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-105"
@@ -187,7 +189,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                       {item.title}
                     </h3>
                   </div>
-                </a>
+                </Link>
               ) : null
             )}
           </div>
