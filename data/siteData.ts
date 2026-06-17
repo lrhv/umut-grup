@@ -99,6 +99,12 @@ export const deliveredProjects = [
     href: "/projeler/yeni-proje-1",
     active: false,
   },
+  {
+    title: "Galaxy",
+    detail: "Detayları İncele",
+    href: "/projeler/galaxy",
+    active: false,
+  },
 ];
 
 export const galleryItems = [
