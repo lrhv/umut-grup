@@ -15,7 +15,7 @@ export default function Office() {
         </div>
         <div className="mt-10 flex flex-wrap gap-4">
           <Button href={siteInfo.whatsappUrl} variant="green"><MessageCircle size={20} /> WhatsApp ile Bilgi Al</Button>
-          <Button href="https://maps.google.com/?q=Silivri" variant="dark"><MapPin size={20} /> Konumu Gör</Button>
+          <Button href="https://maps.google.com/?q=Yeni Mah. Mehmet Silivrili Caddesi Aktaş Sok. No:1 Silivri İstanbul" variant="dark"><MapPin size={20} /> Konumu Gör</Button>
         </div>
       </div>
       <div className="h-[400px] overflow-hidden rounded-md bg-white shadow">
