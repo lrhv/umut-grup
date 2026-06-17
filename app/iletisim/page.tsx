@@ -49,7 +49,7 @@ export default function ContactPage() {
 " green />
           <InfoCard icon={<Phone />} title="Telefon 1" text="0538 798 34 48
 " />
-          <InfoCard icon={<Phone />} title="Telefon 2" text="0546 817 14 10" />
+          <InfoCard icon={<Phone />} title="Telefon 2" text="0538 798 34 48" />
         </div>
       </section>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
                 <ContactRow icon={<MapPin />} title="ADRES" text={siteInfo.address} />
                 <ContactRow icon={<Phone />} title="TELEFON 1" text="0538 798 34 48
 " />
-                <ContactRow icon={<Phone />} title="TELEFON 2" text="0546 817 14 10" />
+                <ContactRow icon={<Phone />} title="TELEFON 2" text="0538 798 34 48" />
                 
                 <ContactRow icon={<Clock3 />} title="ÇALIŞMA SAATLERİ" text="Hafta içi: 09:00 – 18:00" />
               </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
               >
                 <span className="flex items-center gap-3">
                   <MessageCircle />
-                  0546 817 14 10
+                  0538 798 34 48
                 </span>
                 <ChevronRight />
               </a>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                   <Phone className="text-[#d1ad43]" />
                   0538 798 34 48
  <br />
-                  0546 817 14 10
+                  0538 798 34 48
                 </p>
 
                 <p className="flex gap-3">
