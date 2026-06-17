@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { featuredProjects } from "@/data/siteData";
-
+import { publicPath } from "@/lib/paths";
 export default function FeaturedProjects() {
   return (
     <section id="projects" className="bg-white px-4 py-20 sm:px-6 lg:px-7 lg:py-24">
@@ -30,13 +30,11 @@ export default function FeaturedProjects() {
             className="group block overflow-hidden rounded-md bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
             <div className="relative h-80 overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition duration-700 group-hover:scale-110"
-              />
+              <img
+                  src={publicPath(project.image)}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
 
               <div className="absolute inset-0 bg-black/0 transition group-hover:bg-black/20" />
 
