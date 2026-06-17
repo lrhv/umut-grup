@@ -1,0 +1,86 @@
+export const siteInfo = {
+  brand: "UMUT GROUP",
+  subtitle: "İNŞAAT & GAYRİMENKUL",
+  slogan: "Geleceğe Umutla Bakın",
+  phonePrimary: "0538 798 34 48",
+  phoneSecondary: "0530 417 32 71",
+  address: "Yeni Mah. Mehmet Silivrili Caddesi Aktaş Sok. No:1 Silivri İstanbul",
+  instagram: "@umut_group_insaat",
+  whatsappUrl: "https://wa.me/905304173271",
+};
+
+export const navLinks = [
+  {
+    label: "Anasayfa",
+    href: "/",
+    featured: true,
+  },
+  {
+    label: "Hakkımızda",
+    href: "/hakkimizda",
+  },
+  {
+    label: "Galaxy",
+    href: "/projeler/galaxy",
+  },
+  {
+    label: "İnci Konakları",
+    href: "/projeler/inci-konaklari",
+  },
+  {
+    label: "Huzur Konakları",
+    href: "/projeler/huzur-konaklari",
+  },
+  {
+    label: "Gözde Sitesi",
+    href: "/projeler/gozde",
+  },
+  {
+    label: "Mercan Park",
+    href: "/projeler/mercan",
+  },
+  {
+    label: "Yeni Proje 1",
+    href: "/projeler/yeni-proje-1",
+  },
+];
+
+export const featuredProjects = [
+  {
+    title: "Projeler Galaxy",
+    description: "Lüksün Zirvesinde Bir Yaşam",
+    location: "Silivri, İstanbul",
+    type: "Konut",
+    image: "/images/galaxy.jpg",
+  },
+  {
+    title: "İnci Konakları",
+    description: "Doğayla İç İçe Konforlu Yaşam",
+    location: "Silivri, İstanbul",
+    type: "Konut",
+    image: "/images/inci.jpg",
+  },
+  {
+    title: "Huzur Konakları",
+    description: "Aileniz İçin Huzurlu Bir Yuva",
+    location: "Silivri, İstanbul",
+    type: "Konut",
+    image: "/images/huzur.jpg",
+  },
+];
+
+export const deliveredProjects = [
+  { title: "Huzur Konakları", detail: "56 Daire · 2 Dükkan" },
+  { title: "Green Garden", detail: "54 Daire · 3 Dükkan", active: true },
+  { title: "İnci Konakları", detail: "36 Daire" },
+  { title: "Mercan Park", detail: "18 Daire" },
+  { title: "Gözde Sitesi", detail: "112 Daire · 8 Dükkan" },
+  { title: "Galaxy", detail: "12 Daire · 4 Dükkan" },
+];
+
+export const galleryItems = [
+  { title: "Yatak Odası", image: "/images/yatak.jpg" },
+  { title: "Mutfak", image: "/images/mutfak.jpg" },
+  { title: "Çocuk Odası", image: "/images/cocuk.jpg" },
+  { title: "Oturma Odası", image: "/images/oturma.jpg" },
+];

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
