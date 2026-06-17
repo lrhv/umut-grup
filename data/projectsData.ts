@@ -121,6 +121,21 @@ export const projects: Project[] = [
         category: "Genel",
         label: "Proje Görünümü",
       },
+      {
+        src: "/images/projects/huzur/3.jpg",
+        category: "Genel",
+        label: "Proje Görünümü",
+      },
+      {
+        src: "/images/projects/huzur/4.jpg",
+        category: "Genel",
+        label: "Proje Görünümü",
+      },
+      {
+        src: "/images/projects/huzur/5.jpg",
+        category: "Genel",
+        label: "Proje Görünümü",
+      },
     ],
     otherProjects: ["galaxy", "inci-konaklari"],
   },
