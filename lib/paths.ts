@@ -1,5 +1,5 @@
 export const basePath =
-  process.env.NODE_ENV === "production" ? "/umut-grup" : "";
+  process.env.NODE_ENV === "production" ? "/umut-grup" : "/umut-grup/";
 
 export function publicPath(path: string) {
   if (!path) return path;
