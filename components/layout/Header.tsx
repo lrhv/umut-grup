@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { navLinks, siteInfo } from "@/data/siteData";
-import { Menu, MessageCircle, Phone } from "lucide-react";
+import { Menu, MessageCircle, Phone, X } from "lucide-react";
 import { publicPath } from "@/lib/paths";
+import { useState } from "react";
+
 function InstagramSvg({ size = 15 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -11,34 +15,49 @@ function InstagramSvg({ size = 15 }: { size?: number }) {
 }
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="hidden bg-[#181818] px-4 py-2 font-body text-xs text-[#d1ad43] md:block lg:px-7 lg:text-sm">
         <div className="flex items-center justify-between gap-4">
           <div className="flex gap-4 lg:gap-8">
-            <span className="flex items-center gap-2">
+            <a
+              href={`tel:${siteInfo.phonePrimary.replaceAll(" ", "")}`}
+              className="flex items-center gap-2"
+            >
               <Phone size={14} />
               {siteInfo.phonePrimary}
-            </span>
-            <span className="hidden items-center gap-2 sm:flex">
+            </a>
+
+            <a
+              href={`tel:${siteInfo.phoneSecondary.replaceAll(" ", "")}`}
+              className="hidden items-center gap-2 sm:flex"
+            >
               <Phone size={14} />
               {siteInfo.phoneSecondary}
-            </span>
+            </a>
           </div>
 
           <div className="hidden items-center gap-6 lg:flex">
             <span className="text-[#9b907c]">{siteInfo.address}</span>
-            <span className="flex items-center gap-2 font-medium">
+
+            <a
+              href="https://www.instagram.com/umut_group_insaat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 font-medium"
+            >
               <InstagramSvg />
               {siteInfo.instagram}
-            </span>
+            </a>
           </div>
         </div>
       </div>
 
       <header className="sticky top-0 z-50 w-full bg-white shadow-[0_2px_10px_rgba(0,0,0,0.08)]">
         <div className="flex h-[72px] items-center justify-between px-4 sm:h-[78px] lg:h-[88px] lg:px-7">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center" onClick={() => setOpen(false)}>
             <Image
               src={publicPath("/images/logo.png")}
               alt="Umut Group"
@@ -75,13 +94,53 @@ export default function Header() {
             </a>
 
             <button
+              onClick={() => setOpen((prev) => !prev)}
               className="flex h-10 w-10 items-center justify-center rounded-md border border-[#dcd4c8] xl:hidden"
               aria-label="Menüyü Aç"
             >
-              <Menu size={23} />
+              {open ? <X size={23} /> : <Menu size={23} />}
             </button>
           </div>
         </div>
+
+        {open && (
+          <div className="absolute left-0 top-full z-50 w-full border-t border-[#eee4d8] bg-white shadow-xl xl:hidden">
+            <nav className="flex flex-col px-4 py-5">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`border-b border-[#eee4d8] py-4 font-body text-[16px] font-semibold transition hover:text-[#d1ad43] ${
+                    link.featured ? "text-[#d1ad43]" : "text-[#111]"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+
+              <a
+                href={siteInfo.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="mt-5 flex items-center justify-center gap-3 rounded-md bg-[#25d366] px-6 py-4 font-body font-semibold text-white"
+              >
+                <MessageCircle size={20} />
+                WhatsApp
+              </a>
+
+              <a
+                href={`tel:${siteInfo.phonePrimary.replaceAll(" ", "")}`}
+                onClick={() => setOpen(false)}
+                className="mt-3 flex items-center justify-center gap-3 rounded-md border border-[#ded8cc] bg-[#f6f3ed] px-6 py-4 font-body font-semibold text-[#111]"
+              >
+                <Phone size={20} />
+                {siteInfo.phonePrimary}
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
     </>
   );
